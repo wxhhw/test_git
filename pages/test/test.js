@@ -7,7 +7,8 @@ Page({
           {
             age:74,
             name:"人",
-            gender:"male"
+            gender:"male",
+            school:"WHU"
           },
           ischecked:false,
           list:[
