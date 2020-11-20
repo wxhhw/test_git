@@ -1,1 +1,1 @@
-# test_git
+# this is a repository for git
