@@ -1,0 +1,29 @@
+/* 
+    1.小程序不需要主动引入样式文件 
+    2.需要把页面中某些元素的单位从px转换为rpx
+        2.1 设计稿 750px
+            750px=750rpx
+            1px=1rpx
+        2.2 把屏幕宽度改成375px
+            375px=750rpx
+            1px=2rpx
+    3.存在一个设计稿，宽度未知，设为page
+        3.1设计稿存在一个元素宽度100px，使用以上的需求去实现不同宽度的页面适配
+            page px=750rpx
+            100 px=750rpx*100/page 
+            假设 page=375px
+    4. 利用一个calc属性（css和wxss都支持）
+        4.1 750和rpx之间不要留有空格
+        4.2 运算符的两边也不要留有空格
+
+    公式总结：假设设计稿的宽度为x，需要实现的元素的宽度为y，那么真正需要的宽度为calc(750rpx*y/x)
+    宽度为750rpx的时候正好填充满整个屏幕
+*/
+
+view{
+    /*width: 400rpx;*/
+    width: calc(750rpx*100/375);
+    height:1100rpx;
+    font-size: 40rpx;
+    background-color: aqua;
+}
