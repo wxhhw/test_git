@@ -6,7 +6,8 @@ Page({
           person:
           {
             age:74,
-            name:"人"
+            name:"人",
+            gender:"male"
           },
           ischecked:false,
           list:[
