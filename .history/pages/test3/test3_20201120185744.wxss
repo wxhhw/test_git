@@ -1,2 +1,2 @@
 /* 引入的代码是通过@import 来引入的。路径只能是相对路径*/
-@import "../../styles/common.wxss";
+@import "../../styles/common_20201120184843.wxss";
