@@ -1,0 +1,21 @@
+<!--
+    导航组件navagator
+    0.块级元素，默认会换行，可以直接加宽度和高度
+    1. url：跳转的页面路径（绝对路径或者相对路径）
+    2.target，要跳转到当前的小程序 还是其他的小程序的页面。默认值是self，miniProgram其他小程序的页面。
+    3.open-type 跳转的方式
+        3.1 navigate 默认值。保留当前⻚⾯，跳转到应⽤内的某个⻚⾯，但是不能跳到tabbar ⻚⾯（可以返回）
+        3.2 redirect 关闭当前⻚⾯，跳转到应⽤内的某个⻚⾯，但是不允许跳转到tabbar ⻚⾯。（不能返回）
+        3.3 switchTab 跳转到 tabBar ⻚⾯，并关闭其他所有⾮ tabBar ⻚⾯
+        3.4 reLaunch 关闭所有⻚⾯，打开到应⽤内的某个⻚⾯
+        以下的两个不太常用：
+        3.5 navigateBack 关闭当前⻚⾯，返回上⼀⻚⾯或多级⻚⾯。可通过 getCurrentPages() 获取当 前的⻚⾯栈，决定需要返回⼏层
+        3.6 exit 退出⼩程序，target=miniProgram时⽣效
+-->
+
+<navigator url="/pages/text7/text7">轮播图界面</navigator>
+<navigator url="/pages/index/index">无法跳转到tabbar页面</navigator>
+<navigator open-type="redirect" url="/pages/text7/text7">轮播图界面</navigator>
+<navigator open-type="switchTab" url="/pages/index/index">switchTab可以跳转到tabbar页面，但是无法返回</navigator>
+<navigator open-type="reLaunch" url="/pages/index/index">reLaunch可以跳转到任意页面，但是无法返回</navigator>
+
